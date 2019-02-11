@@ -31,14 +31,16 @@ namespace DatingAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
         {
-            var value = await _context.Values.FirstOrDefaultAsync(valor => valor.Id == id);
+            var value = await _context.Values
+                .FirstOrDefaultAsync(valor => valor.Id == id);
             return Ok(value);
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post(string value)
         {
+            Console.WriteLine(value);
         }
 
         // PUT api/values/5
