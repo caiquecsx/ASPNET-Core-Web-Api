@@ -1,0 +1,13 @@
+<h3>Registro</h3>
+
+<div>
+  <form (submit)="onSubmit()">
+    <label>Username: </label>
+    <input [(ngModel)]="name" name="name">
+    <br/>
+    <label>Password:</label>
+    <input type="password" [(ngModel)]="password" name="password">
+    <br/>
+    <button type="submit">Send</button>
+  </form>
+</div>
